@@ -1,0 +1,99 @@
+.control-label, h3, .summary{
+    color:whitesmoke;
+}
+
+.help-block, .help-block-error{
+    color: #F11712;
+}
+
+h3.text-center{
+    padding-top: 2%;
+}
+
+.table{
+    background-color: white;
+    border: 1px solid #3a6073 ;
+}
+
+.button1 {
+    border: 1px solid rgba(89, 171, 222,1);
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: 500; 
+  }
+  .btn1 {
+    color: #fff;
+  }
+  .btn1:hover {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .button1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(46.853900975182455deg, rgba(89, 171, 222,1) 60.98177083333333%,rgba(73, 126, 241,1) 92.54427083333333%,rgba(73, 126, 242,1) 92.54427083333333%);
+    z-index: -1;
+    transition: 0.8s;
+  }
+  .btn1::before {
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+  }
+  .btn1::before {
+    height: 180%;
+  }
+  .btn1:hover::before {
+    height: 0%;
+  }
+
+body{
+    background-color: rgb(64, 120, 199);
+}
+
+@media (min-width: 768px) { 
+    .site-signup{
+        width: 50%;
+        margin-left: 25%; 
+        background-color: #00d2ff;
+        background-image: linear-gradient(315deg, #3a7bd5 0%, #3a6073 74%);
+        border-radius: 2%;
+        box-shadow: 5px 5px 5px #3a6073;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .site-signup{
+        width: 50%;
+        margin-top: 5%;
+        margin-left: 25%; 
+        background-color: #00d2ff;
+        background-image: linear-gradient(315deg, #3a7bd5 0%, #3a6073 74%);
+        border-radius: 2%;
+        box-shadow: 5px 5px 5px #3a6073;
+    }
+}
+
+@media (min-width: 1200px) { 
+     .site-signup{
+        width: 50%;
+        margin-top: 5%;
+        margin-left: 25%; 
+        background-color: #00d2ff;
+        background-image: linear-gradient(315deg, #3a7bd5 0%, #3a6073 74%);
+        border-radius: 2%;
+        box-shadow: 5px 5px 5px #3a6073;
+    }
+}
+

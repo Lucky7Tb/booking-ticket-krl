@@ -8,6 +8,7 @@ use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 use yii\data\Pagination;
 use backend\models\SignupForm;
+use backend\models\LoginForm;
 use backend\models\JadwalSearch;
 use common\models\JenisKereta;
 use common\models\Kelas;
@@ -29,7 +30,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'jadwal', 'create', 'delete', 'update', 'user','confirmasi','signup'],
+                        'actions' => ['logout', 'index', 'jadwal', 'create', 'delete', 'update', 'user','confirmasi','signup', 'cancel'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -135,7 +136,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->render('index');
         } else {
             $model->password = '';
 
@@ -150,6 +151,14 @@ class SiteController extends Controller
         $data = HistoryTransaksi::findOne($confir);
         $data->status_pembelian = "Aktif";
         $data->id_karcis = mt_rand();
+        $data->update();
+        return $this->redirect("user");
+    }
+
+    public function actionCancel($confir){
+        $confir = base64_decode($confir);
+        $data = HistoryTransaksi::findOne($confir);
+        $data->status_pembelian = "Cancel";
         $data->update();
         return $this->redirect("user");
     }

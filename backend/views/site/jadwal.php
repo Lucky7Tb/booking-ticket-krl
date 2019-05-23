@@ -9,7 +9,7 @@
 ?>
 <div class="jadwal-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
 
     <p>
         <?= Html::a('Create Jadwal', ['create'], ['class' => 'btn btn-success']) ?>
@@ -20,6 +20,8 @@
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'tableOptions' => ['class' => 'table table-striped table-bordered'],
+        'options' => ['class' => "table-responsive"],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             

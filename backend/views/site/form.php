@@ -39,7 +39,7 @@
     <?= $form->field($model, 'sisa_tiket')->textInput(['type'=>"number"]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton($model->isNewRecord ? "Save" : "Update", ['class' => 'button1 btn1']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

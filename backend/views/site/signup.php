@@ -1,33 +1,32 @@
 <?php
-
     use yii\helpers\Html;
     use yii\bootstrap\ActiveForm;
     use yii\captcha\Captcha;
 
-    $this->title = 'Signup';
-    $this->params['breadcrumbs'][] = $this->title;
-    
+    $this->title = 'Register Admin';
 ?>
 <div class="site-signup">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Please fill out the following fields to signup:</p>
-
+    <h3 class="text-center">Registrasi Admin Baru</h3>
     <div class="row">
-        <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+                <div class="col-sm-offset-2 col-sm-8 col-lg-offset-2 col-lg-8">
+                    <?= $form->field($model, 'username')->textInput(['placeholder' => "example123",'autofocus' => true]) ?>
+                </div>
 
-                <?= $form->field($model, 'username')->textInput(['placeholder' => "example123",'autofocus' => true]) ?>
+                <div class="col-sm-offset-2 col-sm-8 col-lg-offset-2 col-lg-8">
+                    <?= $form->field($model, 'email')->textInput(['placeholder' => "example@example.com"])?>
+                </div>
 
-                <?= $form->field($model, 'email')->textInput(['placeholder' => "example@example.com"])?>
+                <div class="col-sm-offset-2 col-sm-8 col-lg-offset-2 col-lg-8">
+                    <?= $form->field($model, 'password')->passwordInput() ?>
+                </div>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+                <div class="col-lg-offset-2 col-lg-3 col-sm-offset-2 col-sm-2">
+                    <div class="form-group">
+                        <?= Html::submitButton('Signup', ['class' => 'button1 btn1', 'name' => 'signup-button']) ?>
+                    </div>
                 </div>
 
             <?php ActiveForm::end(); ?>
-        </div>
     </div>
 </div>

@@ -28,7 +28,7 @@
                     <?php if($history->status_pembelian == "Aktif" && $history->status_bayar == "BB"):?>
                         <?= Html::a("Konfirmasi Pesanan", ['confirmation?id='.base64_encode($history->Id)]) ?>
                     <?php elseif($history->status_pembelian == "Cancel"):?>
-                        Anda Membatalkan Pesanan
+                        Anda Mencapai Tenggat Waktu
                     <?php elseif($history->status_pembelian == "Pending"):?>
                         Pesanan Sedang di Konfirmasi
                     <?php elseif($history->status_bayar == "SB" && $history->status_pembelian == "Aktif"):?>

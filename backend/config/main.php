@@ -42,6 +42,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'register' => 'site/signup',
+                'dashboard' => 'site/index',
+                'konfirmasi' => 'site/user' 
             ],
         ],
         
