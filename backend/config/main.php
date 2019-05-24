@@ -44,7 +44,12 @@ return [
             'rules' => [
                 'register' => 'site/signup',
                 'dashboard' => 'site/index',
-                'konfirmasi' => 'site/user' 
+                'konfirmasi' => 'site/user',
+                'jadwal' => 'site/jadwal',
+                'addjadwal' => 'site/create',
+                'updatejadwal' => 'site/update',
+                'delete' => 'site/delete',
+                'login' => 'site/login',
             ],
         ],
         

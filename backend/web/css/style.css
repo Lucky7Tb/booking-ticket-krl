@@ -1,18 +1,48 @@
-.control-label, h3, .summary{
+.control-label, h3{
     color:whitesmoke;
+}
+
+.summary{
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+
+label{
+    color: white;
 }
 
 .help-block, .help-block-error{
     color: #F11712;
 }
 
-h3.text-center{
-    padding-top: 2%;
+.container-costume{
+    margin-top: 4%;
 }
 
 .table{
     background-color: white;
-    border: 1px solid #3a6073 ;
+}
+
+.Typed{
+    display: inline;
+    color: whitesmoke;
+}
+
+.str_typed{
+    color: black;
+}
+
+.form{
+    padding-top: 3%;
+}
+
+h3.text-center{
+    padding-top: 2%;
+}
+
+.costume-table{
+    background-color: white;
 }
 
 .button1 {
@@ -62,7 +92,7 @@ body{
 }
 
 @media (min-width: 768px) { 
-    .site-signup{
+    .site-signup, .site-login{
         width: 50%;
         margin-left: 25%; 
         background-color: #00d2ff;
@@ -74,7 +104,7 @@ body{
 }
 
 @media (min-width: 992px) {
-    .site-signup{
+    .site-signup, .site-login{
         width: 50%;
         margin-top: 5%;
         margin-left: 25%; 
@@ -86,7 +116,7 @@ body{
 }
 
 @media (min-width: 1200px) { 
-     .site-signup{
+     .site-signup, .site-login{
         width: 50%;
         margin-top: 5%;
         margin-left: 25%; 

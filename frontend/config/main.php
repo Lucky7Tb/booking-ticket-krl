@@ -40,6 +40,10 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'home' => "site/index",
+                'history' => "site/history",
+                'login' => "site/login",
+                'register' => "site/signup",
             ],
         ],
     ],

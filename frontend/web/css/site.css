@@ -3,6 +3,81 @@ body {
     height: 100%;
 }
 
+@media (min-width: 768px) { 
+    .site-login{
+        width: 50%;
+        margin-left: 25%; 
+        background-color: transparent;
+        border-radius: 2%;
+        box-shadow: 5px 5px 5px #3a6073;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .site-login{
+        width: 50%;
+        margin-top: 5%;
+        margin-left: 25%; 
+        background-color: transparent;
+        border-radius: 2%;
+        box-shadow: 5px 5px 5px #3a6073;
+    }
+}
+
+@media (min-width: 1200px) { 
+     .site-login{
+        width: 50%;
+        margin-top: 5%;
+        margin-left: 25%; 
+        background-color: transparent;
+        border-radius: 2%;
+        box-shadow: 5px 5px 5px #3a6073;
+    }
+}
+
+.button1 {
+    border: 1px solid rgba(89, 171, 222,1);
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: 500; 
+  }
+  .btn1 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .btn1:hover {
+    color: rgba(89, 171, 222,1);
+    border: 1px solid rgba(89, 171, 222,1);
+  }
+  .button1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(46.853900975182455deg, rgba(89, 171, 222,1) 60.98177083333333%,rgba(73, 126, 241,1) 92.54427083333333%,rgba(73, 126, 242,1) 92.54427083333333%);
+    z-index: -1;
+    transition: 0.8s;
+  }
+  .btn1::before {
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+  }
+  .btn1::before {
+    height: 180%;
+  }
+  .btn1:hover::before {
+    height: 0%;
+  }
+
 .wrap {
     min-height: 100%;
     height: auto;

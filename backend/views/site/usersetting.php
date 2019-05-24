@@ -10,7 +10,7 @@
     <form>
         <?php Pjax::begin()?>
         <div class="table-responsive">
-            <table class="table table-bordered text-center table-hover table-condensed">
+            <table class="table table-bordered text-center table-hover table-condensed" data-aos="flip-left">
                 <tr class="active">
                     <th style="text-align: center">User</th>
                     <th style="text-align: center">Id Jadwal</th>
@@ -29,8 +29,8 @@
                         <td><?= Html::encode($historyUser->total_harga)?></td>
                         <td><?= Html::encode($historyUser->status_bayar)?></td>
                         <td><?= Html::encode($historyUser->status_pembelian)?></td>
-                        <td>        
-                            <?= Html::img('../../web/bukti/'.$historyUser->bukti_pembayaran, ['width'=>100])?>
+                        <td>
+                            <?= Html::img('@web/bukti/'.$historyUser->bukti_pembayaran, ['alt' => "Bukti Pembayaran",'width'=>100])?>
                         </td>
                         <td>
                             <?php if($historyUser->status_pembelian == "Cancel"):?>

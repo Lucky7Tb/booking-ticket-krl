@@ -9,7 +9,7 @@
 ?>
 <div class="jadwal-index">
 
-    <h3><?= Html::encode($this->title) ?></h3>
+    <h3 class="label-costume"><?= Html::encode($this->title) ?></h3>
 
     <p>
         <?= Html::a('Create Jadwal', ['create'], ['class' => 'btn btn-success']) ?>
@@ -20,7 +20,8 @@
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'tableOptions' => ['class' => 'table table-striped table-bordered'],
+        'showFooter' => false,
+        'tableOptions' => ['class' => 'table table-striped table-bordered costume-table'],
         'options' => ['class' => "table-responsive"],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
@@ -37,7 +38,7 @@
             [
                 'header' => "Aksi",
                 'class' => 'yii\grid\ActionColumn',
-                'template' => "{delete} {update}",
+                'template' => "{update} {delete}",
                 'buttons' => [
                     'delete' => function ($url, $model){
                         return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, ['data'=>['confirm'=>"Are You Sure Wanna Delete it?"], 'data-method'=>"POST"]);
@@ -48,7 +49,7 @@
                 ],
                  'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'update') {
-                        $url ='update?id='. base64_encode($model->id_jadwal);
+                        $url ='updatejadwal?id='. base64_encode($model->id_jadwal);
                         return $url;
                     }
 

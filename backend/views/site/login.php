@@ -4,26 +4,27 @@
     use yii\bootstrap\ActiveForm;
 
     $this->title = 'Login';
-    $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Please fill out the following fields to login:</p>
-
+    <h3 class="text-center"><?= Html::encode($this->title) ?></h3>
     <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+        <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
+            <div class="col-sm-offset-2 col-sm-8 col-lg-offset-2 col-lg-8">
                 <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+            </div>
 
+            <div class="col-sm-offset-2 col-sm-8 col-lg-offset-2 col-lg-8">
                 <?= $form->field($model, 'password')->passwordInput() ?>
+            </div>
 
+            <div class="col-lg-offset-2 col-lg-3 col-sm-offset-2 col-sm-2">
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    <?= Html::submitButton('Login', ['class' => 'button1 btn1', 'name' => 'login-button']) ?>
                 </div>
+            </div>
 
             <?php ActiveForm::end(); ?>
         </div>

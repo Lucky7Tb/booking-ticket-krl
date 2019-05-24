@@ -18,12 +18,13 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="wrap" data-aos="fade">
     <?php
     NavBar::begin([
         'brandLabel' => "E-KRL",
@@ -68,6 +69,13 @@ AppAsset::register($this);
         <p class="pull-left">&copy; <?= Html::encode("Lucky Tri Bhakti") ?> <?= date('Y') ?></p>
     </div>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+    })
+</script>
 
 <?php $this->endBody() ?>
 </body>

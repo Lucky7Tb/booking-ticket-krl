@@ -1,10 +1,11 @@
 <?php
     use yii\helpers\Html;
+    $this->title = "History Pembayaran";
 ?>
-<div>
-
+<h3>Daftar History Pembelian</h3>
+<div class="table-responsive">
     <form>
-        <table class="table table-bordered">
+        <table class="table table-bordered table-stripped" data-aos="flip-left">
             <tr>
                 <th>Id Jadwal</th>
                 <th>Jumlah Tiket</th>
@@ -39,5 +40,4 @@
             <?php endforeach;?>
         </table>
     </form>
-
 </div>
