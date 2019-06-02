@@ -130,7 +130,7 @@ class SiteController extends Controller
         $data = HistoryTransaksi::find()->select(['total_harga','jumlah_tiket'])->where(['id'=>$id])->all();
 
         if($model->load(Yii::$app->request->post())){
-            $namaFile = $model->bukti;
+            $namaFile = 'BKT-'.date("Ymii").$model->bukti;
             $model->bukti = UploadedFile::getInstance($model,'bukti');
             $namaEkstensi = $model->bukti->extension;
             $model->bukti->saveAs(Yii::getAlias("@backend").'/web/bukti/'.$namaFile.'.'.$namaEkstensi);

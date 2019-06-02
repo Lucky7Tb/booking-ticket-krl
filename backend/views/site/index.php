@@ -67,5 +67,5 @@
         loop: true
     });
         
-    JS;
+JS;
 $this->registerJs($script);
