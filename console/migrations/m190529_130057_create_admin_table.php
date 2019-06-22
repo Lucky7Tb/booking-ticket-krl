@@ -24,7 +24,7 @@ class m190529_130057_create_admin_table extends Migration
             'username' => 'Lucky',
             'auth_key' => 'S0EB3EQAH2SsHHW21LNHZ7dX4VknvW-K',
             'password_hash' => '$2y$13$nK1jK5UIDpK.oMEJThM0MeaBncNce5ZfDHz2vQ6559NcFoTEUcgQG',
-            'email' => "luckytribhakti@gmail.com",
+            'email' => "admin@example.com",
             'status' => '1',
             'created_at' => "1558499213",
             'updated_at' => "1558499213",
