@@ -23,7 +23,7 @@ End-User(frontend) : 'path/ke/project/frontend/web' contoh : 'localhost/Book-Tik
 # Cara Instalasi
 *******************
 
-- git clone https://github.com/Lucky7Tb/Book-Tiket-KRL.git atau https://github.com/Lucky7Tb/Book-Tiket-KRL.git nama_projectbisa 
+- git clone https://github.com/Lucky7Tb/Book-Tiket-KRL.git atau https://github.com/Lucky7Tb/Book-Tiket-KRL.git nama_project
 
 - bisa juga di download dengan format zip. Tinggal clik download
 
